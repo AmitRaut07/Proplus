@@ -1,0 +1,11 @@
+/* src/components/Layout/Layout.module.css */
+.mainContent {
+  padding-top: 95px; /* equal to navbar height */
+}
+
+/* Adjust padding for smaller devices if navbar height changes */
+@media (max-width: 768px) {
+  .mainContent {
+    padding-top: 150px; /* example if mobile navbar is taller */
+  }
+}

@@ -1,0 +1,200 @@
+.pricingFaqs {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: #0a2647; /* dark blue global body */
+}
+
+/* Hero Section */
+/* Hero Section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;
+  text-align: center;
+  background: url("/images/trust/faqs.jpeg") center/cover no-repeat;
+}
+
+.heroSection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 38, 71, 0.8); /* overlay */
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  color: #ffffff; /* make all text white */
+}
+
+.heroContent h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff; /* heading white */
+}
+
+.heroContent p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #ffffff; /* paragraph white */
+}
+
+.ctaButton {
+  display: inline-block;
+  background: #ffc107;
+  color: #0a2647;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto; /* center button */
+}
+
+.ctaButton:hover {
+  background: #ffffff;
+  color: #0a2647;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Pricing Section */
+.pricingSection {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #ffffffff;
+}
+
+.pricingSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pricingIntro {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #f0f8ff;
+  font-size: 1.1rem;
+}
+
+/* Table Styles */
+.tableContainer {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.pricingTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pricingTable th,
+.pricingTable td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+
+.pricingTable th {
+  background: #2c74b3;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.pricingTable td {
+  font-size: 1rem;
+  color: #0a2647;
+}
+
+.pricingTable tbody tr:nth-child(even) {
+  background: #f2f8ff;
+}
+
+.pricingTable tbody tr:hover {
+  background: #dbeeff;
+}
+
+/* FAQs */
+.faqsSection {
+  padding: 4rem 2rem;
+  background: #12305b;
+}
+
+.faqsSection h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffc107;
+  text-align: center;
+}
+
+.faqList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #1b3d6a;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faqItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.faqItem h3 {
+  font-size: 1.3rem;
+  color: #ffc107;
+  margin-bottom: 0.5rem;
+}
+
+.faqItem p {
+  color: #d1e9ff;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    max-width: 160px;
+  }
+
+  .pricingTable th,
+  .pricingTable td {
+    font-size: 0.9rem;
+  }
+
+  .faqItem h3 {
+    font-size: 1.1rem;
+  }
+}

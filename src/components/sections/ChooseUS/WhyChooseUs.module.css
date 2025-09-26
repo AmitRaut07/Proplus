@@ -1,0 +1,139 @@
+:root {
+  --trust-blue: #0a2647;
+  --action-blue: #2c74b3;
+  --eco-green: #3a7d44;
+  --warning-gold: #ffd166;
+  --pure-white: #ffffff;
+
+  --ink: #0b1320;
+  --muted: #e0e6ed;
+  --radius-xl: 1.25rem;
+  --shadow-sm: 0 6px 20px rgba(0, 0, 0, 0.15);
+  --maxw: 1200px;
+  --pad-x: clamp(16px, 4vw, 32px);
+  --gap: clamp(16px, 2.5vw, 28px);
+  --h2: clamp(26px, 2.8vw, 38px);
+  --h3: clamp(18px, 2vw, 22px);
+}
+
+.section {
+  position: relative;
+  padding: clamp(80px, 10vw, 120px) 0;
+  background: url("/images/generalpestcontrol.jpg") center/cover no-repeat;
+  color: var(--pure-white);
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 38, 71, 0.7); /* dark overlay for readability */
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: clamp(32px, 6vw, 56px);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warning-gold);
+  background: rgba(255, 209, 102, 0.1);
+  border: 1px solid rgba(255, 209, 102, 0.3);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.title {
+  margin-top: 12px;
+  font-size: var(--h2);
+  font-weight: 800;
+  color: var(--pure-white);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 16px;
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: clamp(20px, 3vw, 28px);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  color: var(--warning-gold);
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: var(--h3);
+  font-weight: 700;
+  color: var(--pure-white);
+  margin-bottom: 8px;
+}
+
+.cardText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.ctaWrapper {
+  text-align: center;
+  margin-top: clamp(40px, 6vw, 64px);
+}
+
+.ctaBtn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--action-blue);
+  color: var(--pure-white);
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.ctaBtn:hover {
+  background: var(--eco-green);
+  transform: translateY(-2px);
+}

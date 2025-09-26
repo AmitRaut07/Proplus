@@ -1,0 +1,132 @@
+.formContainer {
+  background: var(--pure-white);
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  max-width: 420px;
+  width: 100%;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.formHeader h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  color: var(--trust-blue);
+  margin-bottom: 0.4rem;
+}
+
+.formHeader p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.formGroup {
+  position: relative;
+  margin-bottom: 1.4rem;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  border-color: var(--action-blue);
+  background: #fff;
+  box-shadow: 0 0 12px rgba(44, 116, 179, 0.25);
+  outline: none;
+}
+
+.formGroup label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #777;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.formGroup input:focus + label,
+.formGroup input:not(:placeholder-shown) + label,
+.formGroup textarea:focus + label,
+.formGroup textarea:not(:placeholder-shown) + label,
+.formGroup select:focus + label,
+.formGroup select:not([value=""]) + label {
+  top: -8px;
+  left: 0.8rem;
+  font-size: 0.75rem;
+  color: var(--action-blue);
+  background: var(--pure-white);
+  padding: 0 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, var(--action-blue), var(--eco-green));
+  color: var(--pure-white);
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: linear-gradient(135deg, var(--eco-green), var(--action-blue));
+  box-shadow: 0 0 15px rgba(58, 125, 68, 0.4);
+  transform: translateY(-2px);
+}
+.thankYou {
+  text-align: center;
+  padding: 2rem;
+  background: #f0f9f5;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.thankYou h2 {
+  color: #2e7d32; /* green success color */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.thankYou p {
+  font-size: 1.1rem;
+  color: #333;
+}
+.submitAnother {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--trust-blue); /* match your site’s theme */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitAnother:hover {
+  background: #0056b3; /* darker shade */
+}

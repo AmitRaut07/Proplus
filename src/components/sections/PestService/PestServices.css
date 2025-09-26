@@ -1,0 +1,168 @@
+/* Pest Services Section - Photo Version */
+.pest-services-section {
+  background-color: var(--light-bg);
+  padding: 4rem 2rem;
+}
+
+.services-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.services-header h2 {
+  color: var(--navy-dark);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.services-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--blue-bright);
+}
+
+/* Services Grid with Photos */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(10, 38, 71, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure cards take full height */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(10, 38, 71, 0.15);
+}
+
+.service-image-container {
+  position: relative;
+  height: 200px; /* Fixed height for all images */
+  width: 100%; /* Ensure container takes full width */
+  overflow: hidden; /* Contain the image within bounds */
+}
+
+.service-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures consistent image sizing */
+  object-position: center; /* Center the image focus */
+  transition: transform 0.5s ease;
+  display: block; /* Remove any default inline spacing */
+}
+
+.service-card:hover .service-photo {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(10, 38, 71, 0.7) 0%,
+    transparent 50%
+  );
+}
+
+.service-content {
+  padding: 1.2rem 1.5rem;
+  flex-grow: 1; /* Allows content to push button to bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card h3 {
+  color: var(--navy-dark);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.service-btn {
+  display: block;
+  background: transparent;
+  color: var(--blue-bright);
+  border: 1px solid var(--blue-bright);
+  padding: 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  margin-top: auto; /* Pushes button to bottom */
+  width: 100%;
+}
+
+.service-btn:hover {
+  background: var(--blue-bright);
+  color: white;
+}
+
+/* CTA Section */
+.service-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--light-green);
+}
+
+.service-cta p {
+  color: var(--navy-light);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg, var(--blue-bright) 0%, var(--navy-light) 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(44, 116, 179, 0.2);
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(44, 116, 179, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pest-services-section {
+    padding: 3rem 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-image-container {
+    height: 180px; /* Slightly smaller on mobile */
+  }
+}
