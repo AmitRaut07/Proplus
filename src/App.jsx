@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout/Layout.jsx";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -14,19 +15,22 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/PricingFAQs" element={<PricingAndFaqs />} />
-          <Route path="/blogs" element={<Blogs />}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Navigate to="/home" />} />
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="services" element={<Services />} />
+          <Route path="PricingFAQs" element={<PricingAndFaqs />} />
+          <Route path="blogs" element={<Blogs />}>
             <Route index element={<BlogList />} />
             <Route path=":slug" element={<BlogPost />} />
           </Route>
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Layout>
+          <Route path="contact" element={<Contact />} />
+        </Route>
+
+        <Route path="*" element={<Navigate to="/home" />} />
+      </Routes>
     </Router>
   );
 }

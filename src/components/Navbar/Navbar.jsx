@@ -67,10 +67,10 @@ export default function Navbar() {
             <div className={styles.navLeftSection}>
               <div className={styles.navbarBrand}>
                 <Link to="/" className={location.pathname === "/" ? styles.activeLink : ""}>
-                  <img src="/logo.jpg" alt="Pro Plus Pest Control Logo" />
+                  <img src="/logo.jpg" alt="Pro PlusLogo" />
                 </Link>
                 <div className={styles.brandText}>
-                  <h1>Pro Plus <br /> Pest Control</h1>
+                  <h1>Pro Plus <br />Termite & Pest Control</h1>
                   <p className={styles.slogan}>Home peace, pest cease</p>
                 </div>
               </div>

@@ -67,7 +67,11 @@ const QuotationForm = () => {
               <input type="email" id="email" name="email" required placeholder=" " />
               <label htmlFor="email">Email Address</label>
             </div>
-
+            {/* Address */}
+            <div className={styles.formGroup}>
+              <input type="text" id="address" name="address" required placeholder=" " />
+              <label htmlFor="name">Address/Suburb</label>
+            </div>
             {/* Service Needed */}
             <div className={styles.formGroup}>
               <select
